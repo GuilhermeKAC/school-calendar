@@ -13,7 +13,7 @@ class SchoolRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,9 @@ class SchoolRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'name' => 'required',
+            'default_max_students' => 'nullable',
+            'default_duration' => 'nullable',
         ];
     }
 }

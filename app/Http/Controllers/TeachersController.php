@@ -10,7 +10,7 @@ class TeachersController extends Controller
 {
     public function index(Request $request): Renderable
     {
-        return view();
+        return view('teacher.index');
     }
 
     public function store(): RedirectResponse
